@@ -8,6 +8,13 @@
     ln -s ~/.vim/vimrc ~/.vimrc
     ln -s ~/.vim/ackrc ~/.ackrc
 
+# Compile command-t
+
+    rvm system #ensure build on Ruby 1.8.7 if using RVM
+    cd ~/.vim/bundle/command-t
+    bundle
+    rake make
+
 # Updating
 
 As long as your checkout is kept clean, you can easily update, rebase your local changes and update submodules with:
