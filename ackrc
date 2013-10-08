@@ -5,3 +5,5 @@
 
 --ignore-dir=tmp
 --ignore-dir=public
+--ignore-dir=vendor/bundle
+--ignore-dir=coverage
