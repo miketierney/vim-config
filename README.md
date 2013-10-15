@@ -7,6 +7,8 @@
     git submodule update --init
     ln -s ~/.vim/vimrc ~/.vimrc
     ln -s ~/.vim/ackrc ~/.ackrc
+    ln -s ~/.vim/tmux.conf ~/.tmux.conf
+    
 
 # Compile command-t
 
