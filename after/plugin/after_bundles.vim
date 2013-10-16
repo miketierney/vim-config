@@ -6,4 +6,4 @@
 " This lets you use commands defined in plugins, which haven't been created at
 " .vimrc-time.
 
-doautocmd User AfterBundles
+" doautocmd User AfterBundles
