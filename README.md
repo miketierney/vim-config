@@ -9,6 +9,8 @@
     ln -s ~/.vim/ackrc ~/.ackrc
     ln -s ~/.vim/tmux.conf ~/.tmux.conf
     
+Double click on the `Menlo-Powerline.otf` font to install it to get the fancy powerline symbols.
+    
 
 # Compile command-t
 
