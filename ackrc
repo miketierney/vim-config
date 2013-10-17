@@ -4,6 +4,7 @@
 --type-set=js=.js,.coffee
 
 --ignore-dir=tmp
+--ignore-dir=log
 --ignore-dir=public
 --ignore-dir=vendor/bundle
 --ignore-dir=coverage
