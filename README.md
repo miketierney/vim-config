@@ -8,13 +8,13 @@
     ln -s ~/.vim/vimrc ~/.vimrc
     ln -s ~/.vim/ackrc ~/.ackrc
     ln -s ~/.vim/tmux.conf ~/.tmux.conf
-    
+
 Double click on the `Menlo-Powerline.otf` font to install it to get the fancy powerline symbols.
-    
+
 
 # Compile command-t
 
-    rvm system #ensure build on Ruby 1.8.7 if using RVM
+    rvm system #ensure build on Ruby version that was used when installing vim 
     cd ~/.vim/bundle/command-t
     bundle
     rake make
