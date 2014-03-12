@@ -24,6 +24,9 @@ vmap <leader>s  :s/
 " Split screen
 map <leader>v   :vsp<CR>
 
+" Do not scroll horizontally split window
+nnoremap <C-W>s Hmx`` \|:split<CR>`xzt``
+
 " Move between screens
 map <leader>w   ^Ww
 map <leader>=   ^W=
