@@ -17,21 +17,18 @@
 " Pathogen (This must happen first.)
 " --------
 
-filetype off                    " Avoid a Vim/Pathogen bug
-call pathogen#runtime_append_all_bundles()
+set nocompatible
+
+call pathogen#infect()
 call pathogen#helptags()
 
-set nocompatible                " Don't maintain compatibility with vi
 syntax on                       " Highlight known syntaxes
 filetype plugin indent on
 
 
 " Source initialization files
-" ---------------------------
-
 runtime! init/**.vim
 
 
 " Machine-local vim settings - keep this at the end
-" --------------------------
 silent! source ~/.vimrc.local
