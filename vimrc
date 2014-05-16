@@ -25,10 +25,6 @@ set nocompatible                " Don't maintain compatibility with vi
 syntax on                       " Highlight known syntaxes
 filetype plugin indent on
 
-" Syntax highlighting for hamlc files
-au BufRead,BufNewFile *.hamlc set ft=haml
-au BufRead,BufNewFile *.cap set ft=ruby
-au BufRead,BufNewFile *.eco set ft=html
 
 " Source initialization files
 " ---------------------------
