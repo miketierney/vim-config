@@ -1,5 +1,5 @@
 set background=dark
-colorscheme Tomorrow-Night-Blue
+colorscheme Tomorrow-Night
 
 if !has("gui_running")
   colorscheme Tomorrow-Night
