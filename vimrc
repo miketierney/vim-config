@@ -36,6 +36,7 @@ function! Sum(number)
   return a:number
 endfunction
 
+set clipboard=unnamed
 
 " Machine-local vim settings - keep this at the end
 silent! source ~/.vimrc.local
