@@ -19,6 +19,15 @@ Double click on the `Menlo-Powerline.otf` font to install it to get the fancy po
     bundle
     rake make
 
+# Install Tmux Plugin Manager
+
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# Install plugins from TPM
+
+    tmux
+    prefix + I
+
 # Updating
 
 As long as your checkout is kept clean, you can easily update, rebase your local changes and update submodules with:
