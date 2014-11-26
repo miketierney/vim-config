@@ -30,5 +30,12 @@ filetype plugin indent on
 runtime! init/**.vim
 
 
+let g:S = 0  "result in global variable S
+function! Sum(number)
+  let g:S = g:S + a:number
+  return a:number
+endfunction
+
+
 " Machine-local vim settings - keep this at the end
 silent! source ~/.vimrc.local
