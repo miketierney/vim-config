@@ -11,13 +11,9 @@
 
 Double click on the `Menlo-Powerline.otf` font to install it to get the fancy powerline symbols.
 
+# Make sure you have `ag` installed
 
-# Compile command-t
-
-    rvm system #ensure build on Ruby version that was used when installing vim 
-    cd ~/.vim/bundle/command-t
-    bundle
-    rake make
+    brew install ag
 
 # Install Tmux Plugin Manager
 
