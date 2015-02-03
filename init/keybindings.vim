@@ -87,14 +87,21 @@ map <D-N> :FufFile **/<CR>
 " refresh the FuzzyFinder cache
 map <leader>rf :FufRenewCache<CR>
 
-" Command-T
-map <D-N>       :CommandTFlush<CR>:CommandT<CR>
-map <leader>F   :CommandTFlush<CR>:CommandT<CR>
-map <leader>f   :CommandT<CR>
-
 " CtrlP
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlPMRU'
+let g:ctrlp_map = '<leader>f'
+let g:ctrlp_working_path_mode = 'ra'
+map <c-p>       :CtrlPMRUFiles<CR>
+map <leader>F   :<F5>CtrlP<CR>
+map <leader>f   :<F5>CtrlP<CR>
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+      \ --ignore .git
+      \ --ignore .svn
+      \ --ignore .hg
+      \ --ignore .DS_Store
+      \ --ignore "**/*.pyc"
+      \ -g ""'
+
 
 " ctags with rails load path
 map <leader>rt :!bundle exec rails runner 'puts $LOAD_PATH.select{\|x\| x.include?(Dir.pwd) && x \!~ \%r{/(vendor\|spec)\b} }.join(" ")' \| xargs /usr/local/bin/ctags -R public/javascripts<CR>
