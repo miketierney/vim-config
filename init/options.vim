@@ -25,7 +25,7 @@ set wildignore+=public/images/**   " ...Also images.
 set wildignore+=vendor/**          " ...Also vendor.
 
 set list                        " Show whitespace
-set list lcs=trail:·,tab:»·
+set list lcs=trail:·
 
 set showmatch                   " Show matching brackets
 set hidden                      " Allow hidden, unsaved buffers
