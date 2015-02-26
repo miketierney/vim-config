@@ -1,6 +1,6 @@
 set background=dark
-colorscheme Tomorrow-Night
+colorscheme molokai
 
 if !has("gui_running")
-  colorscheme Tomorrow-Night
+  colorscheme molokai
 end

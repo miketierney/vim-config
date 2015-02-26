@@ -23,6 +23,7 @@ vmap <leader>s  :s/
 
 " Split screen
 map <leader>v   :vsp<CR>
+" map <leader>vw <C-w>v<C-w>l
 
 " Do not scroll horizontally split window
 nnoremap <C-W>s Hmx`` \|:split<CR>`xzt``
@@ -33,8 +34,15 @@ map <leader>=   ^W=
 map <leader>j   ^Wj
 map <leader>k   ^Wk
 
-" Open .vimrc file in new tab. Think Command + , [Preferences...] but with Shift.
-map <D-<>       :tabedit ~/.vimrc<CR>
+" Tabs
+map <leader>te :tabedit<cr>
+map <leader>tc :tabclose<cr>
+map <leader>to :tabonly<cr>
+map <leader>tn :tabnext<cr>
+map <leader>tp :tabprevious<cr>
+map <leader>tf :tabfirst<cr>
+map <leader>tl :tablast<cr>
+map <leader>tm :tabmove
 
 " Reload .vimrc
 map <leader>rv  :source ~/.vimrc<CR>
@@ -56,9 +64,11 @@ inoremap jj <Esc>
 " Fast scrolling
 nnoremap <C-e>  3<C-e>
 nnoremap <C-y>  3<C-y>
+nnoremap <C-k> 10k
+nnoremap <C-j> 10j
 
 " File tree browser
-map \           :NERDTreeToggle<CR>
+map \\           :NERDTreeToggle<CR>
 
 " File tree browser showing current file - pipe (shift-backslash)
 map \|          :NERDTreeFind<CR>
@@ -75,16 +85,7 @@ map <M-D-Right> :bn<CR>
 vmap <tab> >gv
 vmap <s-tab> <gv
 
-" FuzzyFinder and switchback commands
-map <leader>e   :e#<CR>
-map <leader>b   :FufBuffer<CR>
-map <leader><C-N> :FufFile **/<CR>
-map <D-e> :FufBuffer<CR>
-map <leader>n :FufFile **/<CR>
-map <D-N> :FufFile **/<CR>
-
-" refresh the FuzzyFinder cache
-map <leader>rf :FufRenewCache<CR>
+" 
 
 " CtrlP
 let g:ctrlp_map = '<leader>f'
@@ -101,6 +102,18 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore "**/*.pyc"
       \ -g ""'
 
+" File Navigation
+"" Edit or view files in same directory as current file
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <leader>e :edit %%
+map <leader>v :view %%
+
+" restart passenger for the current directory
+map <leader>rst :!touch tmp/restart.txt<cr>
+
+" clever trick that lets you effectively sudo !! after opnening a file in vim
+" (thanks to Steve Lost and Vincent Driessen
+cmap w!! w !sudo tee % >/dev/null
 
 " ctags with rails load path
 map <leader>rt :!bundle exec rails runner 'puts $LOAD_PATH.select{\|x\| x.include?(Dir.pwd) && x \!~ \%r{/(vendor\|spec)\b} }.join(" ")' \| xargs /usr/local/bin/ctags -R public/javascripts<CR>
@@ -110,10 +123,9 @@ map <leader>rT :!bundle exec rails runner 'puts $LOAD_PATH.select{\|x\| x.includ
 map <leader>g   :Gblame<CR>
 
 " Comment/uncomment lines
-map <leader>/   <plug>NERDCommenterToggle
+" map <leader>/   <plug>NERDCommenterToggle
 
-" In command-line mode, <C-A> should go to the front of the line, as in bash.
-cmap <C-A> <C-B>
+map <silent> <D-C> :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>cmap <C-A> <C-B>
 
 " Copy current file path to system pasteboard
 map <silent> <D-C> :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
@@ -149,4 +161,4 @@ nmap du :diffupdate<CR>
 map <leader>u :GundoToggle<CR>
 
 " vim-blockle.vim
-let g:blockle_mapping = '<Leader>l'
+" let g:blockle_mapping = '<Leader>l'

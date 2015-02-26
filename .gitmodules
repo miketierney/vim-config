@@ -175,3 +175,9 @@
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = https://github.com/bling/vim-airline
+[submodule "bundle/vim-buffergator"]
+	path = bundle/vim-buffergator
+	url = git@github.com:jeetsukumaran/vim-buffergator.git
+[submodule "bundle/vim-colors-molokai"]
+	path = bundle/vim-colors-molokai
+	url = git@github.com:tomasr/molokai.git
