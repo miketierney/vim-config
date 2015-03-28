@@ -1,4 +1,5 @@
-set guifont=Menlo:h12
+set exrc                        " enables per-directory .vimrc files
+set guifont=Menlo:h16
 set guioptions-=T               " Remove GUI toolbar
 set guioptions-=e               " Use text tab bar, not GUI
 set guioptions-=rL              " Remove scrollbars
@@ -7,6 +8,8 @@ set guicursor=a:blinkon0        " Turn off the blinking cursor
 set notimeout                   " No command timeout
 set showcmd                     " Show typed command prefixes while waiting for operator
 set mouse=a                     " Use mouse support in XTerm/iTerm.
+
+set shell=/bin/zsh              " Use zsh for the shell
 
 set expandtab                   " Use soft tabs
 set tabstop=2                   " Tab settings
@@ -27,24 +30,24 @@ set wildignore+=vendor/**          " ...Also vendor.
 set list                        " Show whitespace
 set list lcs=tab:>·,trail:·,extends:>,precedes:<,nbsp:.
 
-set showmatch                   " Show matching brackets
-set hidden                      " Allow hidden, unsaved buffers
-set splitright                  " Add new windows towards the right
-set splitbelow                  " ... and bottom
-set wildmode=list:longest       " Bash-like tab completion
-set scrolloff=3                 " Scroll when the cursor is 3 lines from edge
-set cursorline                  " Highlight current line
+set showmatch                             " Show matching brackets
+set hidden                                " Allow hidden, unsaved buffers
+set splitright                            " Add new windows towards the right
+set splitbelow                            " ... and bottom
+set wildmode=list:longest,list:full       " Bash-like tab completion
+set scrolloff=3                           " Scroll when the cursor is 3 lines from edge
+set cursorline                            " Highlight current line
 
-set laststatus=2                " Always show statusline
+set laststatus=2                          " Always show statusline
 
-set incsearch                   " Incremental search
-set history=1024                " History size
+set incsearch                             " Incremental search
+set history=1024                          " History size
 set ignorecase
-set smartcase                   " Smart case-sensitivity when searching
+set smartcase                             " Smart case-sensitivity when searching
 
-set autoread                    " No prompt for file changes outside Vim
+set autoread                              " No prompt for file changes outside Vim
 
-set swapfile                    " Keep swapfiles
+set swapfile                              " Keep swapfiles
 set directory=~/.vim-tmp,~/tmp,/var/tmp,/tmp
 set backupdir=~/.vim-tmp,~/tmp,/var/tmp,/tmp
 
@@ -56,6 +59,10 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>""
 " Write all writeable buffers when changing buffers or losing focus.
 set autowriteall                " Save when doing various buffer-switching things.
 autocmd BufLeave,FocusLost * silent! wall  " Save anytime we leave a buffer or MacVim loses focus.
+
+" Remember the last location in file
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal g'\"" | endif
 
 " Turn off ri tooltips that don't work with Ruby 1.9 yet
 " http://code.google.com/p/macvim/issues/detail?id=342

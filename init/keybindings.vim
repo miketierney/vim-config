@@ -11,26 +11,39 @@ cabbrev Wq wq
 cabbrev Tabe tabe
 cabbrev Tabc tabc
 
+" Allow typos
+cabbrev ew :wq
+cabbrev qw :wq
+cabbrev aw :wa
+
 "set pastetoggle keybinding
 set pastetoggle=<F2>
-
-" Make Y consistent with D and C
-map Y           y$
 
 " Search
 nmap <leader>s  :%s/
 vmap <leader>s  :s/
 
+" Folding
+" Space to toggle folds
+nnoremap <Space> za
+vnoremap <Space> za
+
+" "Refocus" folds
+nnoremap <leader>z zMzvzz
+
+" Make z0 recursively open whatever top level fold w're in, no matter where
+" the cursor happens to be.
+nnoremap z0 zCz0
+
 " Split screen
-map <leader>v   :vsp<CR>
-" map <leader>vw <C-w>v<C-w>l
+map <leader>w   :vsp<CR>
 
 " Do not scroll horizontally split window
 nnoremap <C-W>s Hmx`` \|:split<CR>`xzt``
 
 " Move between screens
-map <leader>w   ^Ww
-map <leader>=   ^W=
+map <leader>h   ^Ww
+map <leader>l   ^W=
 map <leader>j   ^Wj
 map <leader>k   ^Wk
 
@@ -64,7 +77,9 @@ inoremap jj <Esc>
 " Fast scrolling
 nnoremap <C-e>  3<C-e>
 nnoremap <C-y>  3<C-y>
+vnoremap <C-k> 10k
 nnoremap <C-k> 10k
+vnoremap <C-j> 10j
 nnoremap <C-j> 10j
 
 " File tree browser
@@ -106,14 +121,17 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
 "" Edit or view files in same directory as current file
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
-map <leader>v :view %%
+" map <leader>v :view %%
 
 " restart passenger for the current directory
 map <leader>rst :!touch tmp/restart.txt<cr>
 
 " clever trick that lets you effectively sudo !! after opnening a file in vim
-" (thanks to Steve Lost and Vincent Driessen
 cmap w!! w !sudo tee % >/dev/null
+
+" Shorten the formatting commands.
+vmap Q gq
+nmap Q gqap
 
 " ctags with rails load path
 map <leader>rt :!bundle exec rails runner 'puts $LOAD_PATH.select{\|x\| x.include?(Dir.pwd) && x \!~ \%r{/(vendor\|spec)\b} }.join(" ")' \| xargs /usr/local/bin/ctags -R public/javascripts<CR>
@@ -161,4 +179,4 @@ nmap du :diffupdate<CR>
 map <leader>u :GundoToggle<CR>
 
 " vim-blockle.vim
-" let g:blockle_mapping = '<Leader>l'
+let g:blockle_mapping = '<Leader>l'

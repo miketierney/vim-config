@@ -181,3 +181,42 @@
 [submodule "bundle/vim-colors-molokai"]
 	path = bundle/vim-colors-molokai
 	url = git@github.com:tomasr/molokai.git
+[submodule "bundle/vim-colors-badwolf"]
+	path = bundle/vim-colors-badwolf
+	url = git@github.com:sjl/badwolf.git
+[submodule "bundle/vim-colors-spacegray"]
+	path = bundle/vim-colors-spacegray
+	url = git@github.com:ajh17/Spacegray.vim.git
+[submodule "bundle/vim-colors-atom-dark"]
+	path = bundle/vim-colors-atom-dark
+	url = git@github.com:gosukiwi/vim-atom-dark.git
+[submodule "bundle/vim-colors-flattown"]
+	path = bundle/vim-colors-flattown
+	url = git@github.com:blerins/flattown.git
+[submodule "bundle/vim-colors-railscasts"]
+	path = bundle/vim-colors-railscasts
+	url = git@github.com:chankaward/vim-railscasts-theme.git
+[submodule "bundle/vim-colors-soda"]
+	path = bundle/vim-colors-soda
+	url = git@github.com:DAddYE/soda.vim.git
+[submodule "bundle/vim-colors-elrodeo"]
+	path = bundle/vim-colors-elrodeo
+	url = git@github.com:chmllr/elrodeo-colorscheme.git
+[submodule "bundle/vim-colors-flatcolor"]
+	path = bundle/vim-colors-flatcolor
+	url = git@github.com:MaxSt/FlatColor.git
+[submodule "bundle/vim-colorschemes"]
+	path = bundle/vim-colorschemes
+	url = git@github.com:flazz/vim-colorschemes.git
+[submodule "bundle/grunt.vim"]
+	path = bundle/grunt.vim
+	url = git@github.com:mklabs/grunt.vim.git
+[submodule "bundle/scratch.vim"]
+	path = bundle/scratch.vim
+	url = git@github.com:mtth/scratch.vim.git
+[submodule "bundle/tern_for_vim"]
+	path = bundle/tern_for_vim
+	url = git@github.com:marijnh/tern_for_vim.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = git@github.com:majutsushi/tagbar.git
