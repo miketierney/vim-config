@@ -220,3 +220,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git@github.com:majutsushi/tagbar.git
+[submodule "bundle/vim-colors-flatland"]
+	path = bundle/vim-colors-flatland
+	url = git@github.com:vivkin/flatland.vim.git
