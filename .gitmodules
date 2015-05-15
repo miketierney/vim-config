@@ -223,3 +223,6 @@
 [submodule "bundle/vim-colors-flatland"]
 	path = bundle/vim-colors-flatland
 	url = git@github.com:vivkin/flatland.vim.git
+[submodule "bundle/dash.vim"]
+	path = bundle/dash.vim
+	url = https://github.com/rizzatti/dash.vim.git
