@@ -115,6 +115,7 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore .hg
       \ --ignore .DS_Store
       \ --ignore "**/*.pyc"
+      \ --ignore "app/assets/images"
       \ -g ""'
 
 " File Navigation
