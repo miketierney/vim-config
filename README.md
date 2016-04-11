@@ -15,6 +15,22 @@ Double click on the `Menlo-Powerline.otf` font to install it to get the fancy po
 
     brew install ag
 
+# Make sure you have Node and NPM installed
+
+I prefer [NVM](https://github.com/creationix/nvm)
+
+# Linters/Hinters/other joy
+
+For JavaScript, use eslint:
+
+    npm i -g eslint
+
+For maximum effort, add to that the plugins for React:
+
+    npm i -g eslint babel-eslint eslint-plugin-react
+
+(Other `eslint-plugin-*` packages are available as well, such as angular and lo-dash)
+
 # Install Tmux Plugin Manager
 
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
