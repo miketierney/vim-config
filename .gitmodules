@@ -241,3 +241,6 @@
 [submodule "bundle/vim-codeclimate"]
 	path = bundle/vim-codeclimate
 	url = https://github.com/wfleming/vim-codeclimate
+[submodule "bundle/vim-gitgutter"]
+	path = bundle/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
