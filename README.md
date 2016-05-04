@@ -11,9 +11,9 @@
 
 Double click on the `Menlo-Powerline.otf` font to install it to get the fancy powerline symbols.
 
-# Make sure you have `ag` installed
+# Make sure you have `ag` and `reattach-to-user-namespace` installed (for tmux)
 
-    brew install ag
+    brew install ag reattach-to-user-namespace
 
 # Make sure you have Node and NPM installed
 
