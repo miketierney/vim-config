@@ -250,3 +250,6 @@
 [submodule "bundle/GoldenView.Vim"]
 	path = bundle/GoldenView.Vim
 	url = https://github.com/zhaocai/GoldenView.Vim.git
+[submodule "bundle/vim-sass-lint"]
+	path = bundle/vim-sass-lint
+	url = git@github.com:gcorne/vim-sass-lint.git
