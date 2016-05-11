@@ -1,5 +1,5 @@
 set exrc                        " enables per-directory .vimrc files
-set guifont=Hack:h14
+set guifont=Hack:h11
 set guioptions-=T               " Remove GUI toolbar
 set guioptions-=e               " Use text tab bar, not GUI
 set guioptions-=rL              " Remove scrollbars
