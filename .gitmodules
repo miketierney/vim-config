@@ -253,3 +253,6 @@
 [submodule "bundle/vim-sass-lint"]
 	path = bundle/vim-sass-lint
 	url = git@github.com:gcorne/vim-sass-lint.git
+[submodule "bundle/rainbow"]
+	path = bundle/rainbow
+	url = git@github.com:luochen1990/rainbow.git
