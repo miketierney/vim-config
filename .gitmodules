@@ -256,3 +256,15 @@
 [submodule "bundle/rainbow"]
 	path = bundle/rainbow
 	url = git@github.com:luochen1990/rainbow.git
+[submodule "bundle/vim-material-theme"]
+	path = bundle/vim-material-theme
+	url = https://github.com/jdkanani/vim-material-theme
+[submodule "bundle/vim-hybrid"]
+	path = bundle/vim-hybrid
+	url = git@github.com:scwood/vim-hybrid.git
+[submodule "bundle/vim-color-termschool"]
+	path = bundle/vim-color-termschool
+	url = git@github.com:marcopaganini/termschool-vim-theme.git
+[submodule "bundle/vim-color-onedark"]
+	path = bundle/vim-color-onedark
+	url = git@github.com:joshdick/onedark.vim.git
