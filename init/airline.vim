@@ -2,7 +2,7 @@ let g:airline_detect_modified = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
-let g:airline_theme = "hybrid"
+let g:airline_theme = "powerlineish"
 set encoding=utf-8 " Necessary to show unicode glyphs
 
 if !exists('g:airline_symbols')

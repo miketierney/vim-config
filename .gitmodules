@@ -268,3 +268,6 @@
 [submodule "bundle/vim-color-onedark"]
 	path = bundle/vim-color-onedark
 	url = git@github.com:joshdick/onedark.vim.git
+[submodule "bundle/vim-airlines-themes"]
+	path = bundle/vim-airlines-themes
+	url = git@github.com:vim-airline/vim-airline-themes.git
