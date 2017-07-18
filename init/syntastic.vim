@@ -1,6 +1,7 @@
 let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_sass_checkers=['sass_lint']
-let g:syntastic_scss_checkers=['sass_lint']
+let g:syntastic_sass_checkers=['stylelint']
+let g:syntastic_scss_checkers=['stylelint']
+let g:syntastic_css_checkers=['stylelint']
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
