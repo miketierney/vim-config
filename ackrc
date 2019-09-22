@@ -24,3 +24,6 @@
 --type-set=yml=.yml
 --type-set=erb=.erb
 --type-set=handlebars=.handlebars
+--type-set=ts=.ts
+--type-set=tsx=.tsx
+
